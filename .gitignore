@@ -1,0 +1,40 @@
+# OS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+practice_state/
+cortical_state/
+
+# Node
+node_modules/
+dist/
+
+# Model weights & large staged data (downloaded at first run / staged locally)
+mobileRAG/models/
+Hebbian Memory/core/vad_model/
+
+# Android / Gradle
+.gradle/
+.kotlin/
+.cxx/
+build/
+local.properties
+*.apk
+*.keystore
+
+# Signing material: never commit
+mobileRAG/keystore/
+
+# Archives
+Hebbian Memory/Archive.zip
+
+# IDE
+.idea/
+*.iml
+
+# Copyrighted reference screenshots (local only)
+ac_design.jpeg
+ac_interface.png

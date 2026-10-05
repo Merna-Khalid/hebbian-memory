@@ -1,0 +1,85 @@
+{
+  "runAt": "2026-09-14T04:00:02",
+  "config": {
+    "evalFile": "eval-v1.json",
+    "questions": 27,
+    "minVecScore": 0.30000001192092896,
+    "rrfK": 60,
+    "entities": 97,
+    "edges": 503,
+    "chunks": 12
+  },
+  "modes": {
+    "vector": {
+      "recallAt5": 1,
+      "recallHits": 23,
+      "answerable": 23,
+      "gateAccuracy": 0.75,
+      "gateHits": 3,
+      "unanswerable": 4,
+      "perCategory": {
+        "vector": {
+          "hits": 14,
+          "total": 14
+        },
+        "keyword": {
+          "hits": 3,
+          "total": 3
+        },
+        "multihop": {
+          "hits": 6,
+          "total": 6
+        }
+      },
+      "gatePerCategory": {
+        "unanswerable": {
+          "hits": 3,
+          "total": 4
+        }
+      },
+      "meanChannelMs": {
+        "vec": 0.8888,
+        "embed": 37.8148
+      }
+    },
+    "hybrid": {
+      "recallAt5": 1,
+      "recallHits": 23,
+      "answerable": 23,
+      "gateAccuracy": 0.75,
+      "gateHits": 3,
+      "unanswerable": 4,
+      "perCategory": {
+        "vector": {
+          "hits": 14,
+          "total": 14
+        },
+        "keyword": {
+          "hits": 3,
+          "total": 3
+        },
+        "multihop": {
+          "hits": 6,
+          "total": 6
+        }
+      },
+      "gatePerCategory": {
+        "unanswerable": {
+          "hits": 3,
+          "total": 4
+        }
+      },
+      "meanChannelMs": {
+        "fts": 2.9629,
+        "vec": 1.2962,
+        "embed": 30.6296,
+        "graph": 50.2962
+      }
+    }
+  },
+  "baseline": "20260914-032900.json",
+  "verdicts": {
+    "vector": "PASS",
+    "hybrid": "PASS"
+  }
+}

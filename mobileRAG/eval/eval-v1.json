@@ -1,0 +1,32 @@
+[
+  { "q": "When is the tax filing deadline?", "expectDoc": "taxes.md", "expectContains": ["April 15"], "answerable": true, "category": "vector" },
+  { "q": "What happens if I file Form 4868?", "expectDoc": "taxes.md", "expectContains": ["October 15"], "answerable": true, "category": "vector" },
+  { "q": "When are estimated quarterly tax payments due?", "expectDoc": "taxes.md", "expectContains": ["June 15"], "answerable": true, "category": "vector" },
+  { "q": "What is the Roth IRA contribution limit for 2026?", "expectDoc": "taxes.md", "expectContains": ["7,500"], "answerable": true, "category": "vector" },
+  { "q": "When is the property tax due?", "expectDoc": "taxes.md", "expectContains": ["December 20"], "answerable": true, "category": "vector" },
+  { "q": "What hotel did I book in Tokyo?", "expectDoc": "japan-trip.md", "expectContains": ["Hotel Gracery Shinjuku"], "answerable": true, "category": "vector" },
+  { "q": "When do I arrive in Japan?", "expectDoc": "japan-trip.md", "expectContains": ["March 12"], "answerable": true, "category": "vector" },
+  { "q": "How do I get from Tokyo to Kyoto?", "expectDoc": "japan-trip.md", "expectContains": ["Hikari"], "answerable": true, "category": "vector" },
+  { "q": "What is the budget for the Japan trip?", "expectDoc": "japan-trip.md", "expectContains": ["420,000"], "answerable": true, "category": "vector" },
+  { "q": "How often should I feed my sourdough starter?", "expectDoc": "sourdough.md", "expectContains": ["twice daily"], "answerable": true, "category": "vector" },
+  { "q": "What feeding ratio does the starter need?", "expectDoc": "sourdough.md", "expectContains": ["1:1:1"], "answerable": true, "category": "vector" },
+  { "q": "How do I store the starter long term?", "expectDoc": "sourdough.md", "expectContains": ["freezer"], "answerable": true, "category": "vector" },
+  { "q": "What database did I choose for the graph store?", "expectDoc": "mobilerag-design.md", "expectContains": ["LadybugDB"], "answerable": true, "category": "vector" },
+  { "q": "Why was Gemini Nano unavailable?", "expectDoc": "mobilerag-design.md", "expectContains": ["AICore"], "answerable": true, "category": "vector" },
+  { "q": "What is the capital of France?", "expectDoc": null, "expectContains": ["don't know"], "answerable": false, "category": "unanswerable" },
+  { "q": "What is the best price for a flight to Tokyo?", "expectDoc": null, "expectContains": ["don't know"], "answerable": false, "category": "unanswerable" },
+
+  { "q": "What is the part number for the oil filter?", "expectDoc": "car-maintenance.md", "expectContains": ["90915-YZZD4"], "answerable": true, "category": "keyword" },
+  { "q": "What is the ISBN of the graph algorithms book?", "expectDoc": "reading-list.md", "expectContains": ["978-1492057681"], "answerable": true, "category": "keyword" },
+  { "q": "What is the booking reference for the machiya rental?", "expectDoc": "japan-trip.md", "expectContains": ["KM-88421"], "answerable": true, "category": "keyword" },
+
+  { "q": "Which project is my accountant leading?", "expectDoc": "meeting-notes.md", "expectContains": ["Project Falcon"], "answerable": true, "category": "multihop" },
+  { "q": "What is the internal demo deadline for the project Dana is leading?", "expectDoc": "project-falcon.md", "expectContains": ["October 2, 2026"], "answerable": true, "category": "multihop" },
+  { "q": "Who is the landlord of the apartment I pay property tax on?", "expectDoc": "apartment-cairo.md", "expectContains": ["Hassan Mahmoud"], "answerable": true, "category": "multihop" },
+  { "q": "What gift did I plan for my accountant?", "expectDoc": "gift-ideas.md", "expectContains": ["fountain pen"], "answerable": true, "category": "multihop" },
+  { "q": "Where am I presenting the graph database work?", "expectDoc": "conference-talk.md", "expectContains": ["Droidcon Berlin"], "answerable": true, "category": "multihop" },
+  { "q": "What did the person who booked the machiya present at the offsite?", "expectDoc": "meeting-notes.md", "expectContains": ["mockups"], "answerable": true, "category": "multihop" },
+
+  { "q": "What is the wifi password?", "expectDoc": null, "expectContains": ["don't know"], "answerable": false, "category": "unanswerable" },
+  { "q": "When is my dentist appointment?", "expectDoc": null, "expectContains": ["don't know"], "answerable": false, "category": "unanswerable" }
+]

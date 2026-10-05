@@ -1,0 +1,18 @@
+[
+  { "q": "When is the tax filing deadline?", "expectDoc": "taxes.md", "expectContains": ["April 15"], "answerable": true },
+  { "q": "What happens if I file Form 4868?", "expectDoc": "taxes.md", "expectContains": ["October 15"], "answerable": true },
+  { "q": "When are estimated quarterly tax payments due?", "expectDoc": "taxes.md", "expectContains": ["June 15"], "answerable": true },
+  { "q": "What is the Roth IRA contribution limit for 2026?", "expectDoc": "taxes.md", "expectContains": ["7,500"], "answerable": true },
+  { "q": "When is the property tax due?", "expectDoc": "taxes.md", "expectContains": ["December 20"], "answerable": true },
+  { "q": "What hotel did I book in Tokyo?", "expectDoc": "japan-trip.md", "expectContains": ["Hotel Gracery Shinjuku"], "answerable": true },
+  { "q": "When do I arrive in Japan?", "expectDoc": "japan-trip.md", "expectContains": ["March 12"], "answerable": true },
+  { "q": "How do I get from Tokyo to Kyoto?", "expectDoc": "japan-trip.md", "expectContains": ["Hikari"], "answerable": true },
+  { "q": "What is the budget for the Japan trip?", "expectDoc": "japan-trip.md", "expectContains": ["420,000"], "answerable": true },
+  { "q": "How often should I feed my sourdough starter?", "expectDoc": "sourdough.md", "expectContains": ["twice daily"], "answerable": true },
+  { "q": "What feeding ratio does the starter need?", "expectDoc": "sourdough.md", "expectContains": ["1:1:1"], "answerable": true },
+  { "q": "How do I store the starter long term?", "expectDoc": "sourdough.md", "expectContains": ["freezer"], "answerable": true },
+  { "q": "What database did I choose for the graph store?", "expectDoc": "mobilerag-design.md", "expectContains": ["LadybugDB"], "answerable": true },
+  { "q": "Why was Gemini Nano unavailable?", "expectDoc": "mobilerag-design.md", "expectContains": ["AICore"], "answerable": true },
+  { "q": "What is the capital of France?", "expectDoc": null, "expectContains": ["don't know"], "answerable": false },
+  { "q": "What is the best price for a flight to Tokyo?", "expectDoc": null, "expectContains": ["don't know"], "answerable": false }
+]

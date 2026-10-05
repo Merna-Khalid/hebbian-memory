@@ -1,0 +1,70 @@
+Hebbian golden values — generated from the real Python modules
+Source: Hebbian Memory/core/{arme_v2.py, hippocampal_gnn_pyg.py, type_profiles.py}
+Generator: /tmp/hebbian_golden.py (deterministic, no RNG)
+Interpreter: /opt/anaconda3/envs/RAG/bin/python (torch 2.10.0, torch_geometric 2.8.0)
+Date: 2026-09-14
+Note: Python computes in float32 (torch); the Kotlin port uses Double math —
+spike asserts should use a tolerance around 1e-5, not exact equality.
+
+=== inputs ===
+H (normalized):
+  [0.05241424, 0.05241424, 0.99587059, 0.05241424]
+  [0.05504819, 0.11009638, 0.99086738, 0.05504819]
+  [0.50000000, 0.50000000, 0.50000000, 0.50000000]
+  [0.99587059, 0.05241424, 0.05241424, 0.05241424]
+edge_src: [0, 1, 2]
+edge_dst: [1, 2, 3]
+edge_weight: ['1.00000000', '0.80000001', '1.20000005']
+
+=== compute_e_t_quadrant ===
+Q1 v=0.6 a=0.8: quadrant=Q1 e_t=0.59151940
+Q4 v=0.6 a=0.2: quadrant=Q4 e_t=0.37994896
+Q2 v=-0.7 a=0.8: quadrant=Q2 e_t=-0.50381065
+Q3 v=-0.4 a=0.2: quadrant=Q3 e_t=-0.21728043
+
+=== arme step 1 (Q1, first sight of node_A) ===
+r_t=0.70642495 u_t=0.20000000 delta_t=1.00000000
+quadrant=Q1 e_t=0.59151940 dominance=0.70000000
+s_t=0.82046276 m_t_raw=2.27155078 m_t=1.50862031 gated=False
+
+=== arme step 2 (Q2, same node 60 s later) ===
+r_t=0.70642495 u_t=0.20000000 delta_t=0.18126925
+quadrant=Q2 e_t=-0.50381065 dominance=0.30000000
+s_t=-0.11766928 m_t_raw=0.88899001 m_t=1.26076819 gated=False
+
+=== propagate output (H_post) ===
+  [0.00000000, 0.00000000, 0.00000000, 0.00000000]
+  [0.05236630, 0.05236630, 0.75985444, 0.05236630]
+  [0.04401011, 0.08785006, 0.65993243, 0.04401011]
+  [0.46211717, 0.46211717, 0.46211717, 0.46211717]
+
+=== modulated_hebbian_update (m_t from step 1) ===
+m_t=1.50862031 lam_oja=[0.00800000037997961, 0.012000000104308128, 0.00800000037997961] eligibility_in=[0.30000001192092896, 0.10000000149011612, 0.5]
+new_edge_weight: [1.00000000, 0.83003861, 1.22265911]
+eligibility_out: [0.24000001, 0.59066224, 0.78623879]
+n_eligible=3 n_total=3
+mean_coact=0.29896700
+mean_w=1.01756585
+eligible_mean_w=1.01756585
+ineligible_mean_w=0.00000000
+
+=== modulated_hebbian_update (m_t from step 2, zero traces) ===
+m_t=1.26076819
+new_edge_weight: [0.99699998, 0.82510352, 1.21893644]
+eligibility_out: [0.00000000, 0.51066226, 0.38623875]
+n_eligible=2 n_total=3
+mean_coact=0.29896700
+mean_w=1.01367998
+eligible_mean_w=1.02201998
+ineligible_mean_w=0.99699998
+
+=== type_profiles ===
+SECONDS_PER_DAY=86400
+vocabulary: tau_stale_s=172800.0 lam_mult=1.5
+grammar: tau_stale_s=864000.0 lam_mult=0.7
+event: tau_stale_s=129600.0 lam_mult=1.5
+unknown_type: tau_stale_s=259200.0 lam_mult=1.0
+staleness(86400, vocabulary)=0.39346934
+staleness(0, grammar)=0.00000000
+lam_for(grammar, 0.008)=0.00560000
+lam_for(task, 0.008)=0.01280000
